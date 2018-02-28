@@ -1,0 +1,9 @@
+Babel==0.9.6
+backports.ssl-match-hostname==3.5.0.1
+boto==2.45.0
+cached-property==1.4.0
+certifi==2018.1.18
+chardet==3.0.4
+decorator==3.4.0
+Django==1.11.10
+psycopg2
