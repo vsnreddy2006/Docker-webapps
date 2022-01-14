@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_om6",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SLT_REP",
+			"table": "EKPO"
+		},
+		"sqlPool": {
+			"referenceName": "DedicatedSQLPool",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

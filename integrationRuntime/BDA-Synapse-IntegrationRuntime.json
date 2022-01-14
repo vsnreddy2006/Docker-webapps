@@ -1,0 +1,6 @@
+{
+	"name": "BDA-Synapse-IntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

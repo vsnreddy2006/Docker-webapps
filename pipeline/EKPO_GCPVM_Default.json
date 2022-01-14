@@ -1,0 +1,3584 @@
+{
+	"name": "EKPO_GCPVM_Default",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_ojs",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "SLT_REP.EKPO"
+					},
+					{
+						"name": "Destination",
+						"value": "SLT_REP.EKPO"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SapHanaSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						},
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "bda-poc-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						},
+						"path": "bdapocfiler/synapse/workspaces/bda-poc"
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "MANDT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MANDT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EBELN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EBELN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EBELP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EBELP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LOEKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LOEKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "STATU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "STATU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AEDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AEDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TXZ01",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TXZ01",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MATNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MATNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EMATN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EMATN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BUKRS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BUKRS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WERKS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WERKS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LGORT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LGORT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BEDNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BEDNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MATKL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MATKL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INFNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INFNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "IDNLF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "IDNLF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KTMNG",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KTMNG",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MENGE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MENGE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MEINS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MEINS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BPRME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BPRME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BPUMZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "BPUMZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "BPUMN",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "BPUMN",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "UMREZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "UMREZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "UMREN",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "UMREN",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "NETPR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "NETPR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PEINH",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PEINH",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "NETWR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "NETWR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "BRTWR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "BRTWR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AGDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WEBAZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "WEBAZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MWSKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MWSKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BONUS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BONUS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INSMK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INSMK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPINF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPINF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PRSDR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRSDR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SCHPR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SCHPR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MAHNZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MAHNZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MAHN1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MAHN1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MAHN2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MAHN2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MAHN3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MAHN3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "UEBTO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "UEBTO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "UEBTK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UEBTK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UNTTO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "UNTTO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "BWTAR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BWTAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BWTTY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BWTTY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABSKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ABSKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AGMEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AGMEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ELIKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ELIKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EREKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EREKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PSTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PSTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KNTTP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KNTTP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZVBR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZVBR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VRTKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VRTKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TWRKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TWRKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WEPOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WEPOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WEUNB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WEUNB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "REPOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REPOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WEBRE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WEBRE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZABS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZABS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LABNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LABNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KONNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KONNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KTPNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KTPNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ABDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABFTZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ABFTZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ETFZ1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ETFZ1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ETFZ2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ETFZ2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZSTU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZSTU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NOTKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NOTKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LMEIN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LMEIN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EVERS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EVERS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZWERT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ZWERT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "NAVNW",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "NAVNW",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ABMNG",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ABMNG",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PRDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BSTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BSTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EFFWR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "EFFWR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "XOBLR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "XOBLR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KUNNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KUNNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADRNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADRNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EKKOL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EKKOL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SKTOF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SKTOF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "STAFO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "STAFO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PLIFZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PLIFZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "NTGEW",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "NTGEW",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GEWEI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GEWEI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TXJCD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TXJCD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ETDRK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ETDRK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SOBKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SOBKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ARSNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ARSNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ARSPS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ARSPS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INSNC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INSNC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SSQSS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SSQSS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZGTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZGTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EAN11",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EAN11",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BSTAE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BSTAE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "REVLV",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REVLV",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GEBER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GEBER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FISTL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FISTL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FIPOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FIPOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KO_GSBER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KO_GSBER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KO_PARGB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KO_PARGB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KO_PRCTR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KO_PRCTR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KO_PPRCTR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KO_PPRCTR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MEPRF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MEPRF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BRGEW",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "BRGEW",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VOLUM",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VOLUM",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VOLEH",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VOLEH",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INCO1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INCO1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INCO2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INCO2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VORAB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VORAB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KOLIF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KOLIF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LTSNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LTSNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PACKNO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PACKNO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FPLNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FPLNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GNETWR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "GNETWR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "STAPO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "STAPO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UEBPO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UEBPO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LEWED",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LEWED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EMLIF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EMLIF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LBLKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LBLKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SATNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SATNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ATTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ATTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VSART",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VSART",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HANDOVERLOC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "HANDOVERLOC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KANBA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KANBA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADRN2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADRN2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CUOBJ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CUOBJ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "XERSY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "XERSY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EILDT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EILDT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DRDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DRDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DRUHR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DRUHR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DRUNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DRUNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AKTNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AKTNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABELN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ABELN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABELP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ABELP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANZPU",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ANZPU",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PUNEI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PUNEI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SAISO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SAISO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SAISJ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SAISJ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EBON2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EBON2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EBON3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EBON3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EBONF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EBONF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MLMAA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MLMAA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MHDRZ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MHDRZ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ANFNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANFNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANFPS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANFPS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZKFG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZKFG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "USEQU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "USEQU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UMSOK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UMSOK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BANFN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BANFN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BNFPO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BNFPO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MTART",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MTART",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UPTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UPTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UPVOR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UPVOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI4",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI4",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI5",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI5",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KZWI6",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "KZWI6",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "SIKGR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SIKGR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MFZHI",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "MFZHI",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "FFZHI",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "FFZHI",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "RETPO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RETPO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AUREL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AUREL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BSGRU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BSGRU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LFRET",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LFRET",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MFRGR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MFRGR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NRFHG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NRFHG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1BNBM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1BNBM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1BMATUSE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1BMATUSE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1BMATORG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1BMATORG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1BOWNPRO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1BOWNPRO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1BINDUST",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1BINDUST",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ABUEB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ABUEB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NLABD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NLABD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NFABD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NFABD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZBWS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZBWS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BONBA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "BONBA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "FABKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FABKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1AINDXP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1AINDXP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "J_1AIDATEP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "J_1AIDATEP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MPROF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MPROF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EGLKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EGLKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZTLF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZTLF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KZFME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KZFME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RDPRF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RDPRF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TECHS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TECHS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CHG_SRV",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CHG_SRV",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CHG_FPLNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CHG_FPLNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MFRPN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MFRPN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MFRNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MFRNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EMNFR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EMNFR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NOVET",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NOVET",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AFNAM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AFNAM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TZONRC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TZONRC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "IPRKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "IPRKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LEBRE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LEBRE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BERID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BERID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "XCONDITIONS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "XCONDITIONS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "APOMS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APOMS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CCOMP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CCOMP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GRANT_NBR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GRANT_NBR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FKBER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FKBER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "STATUS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "STATUS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RESLO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RESLO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KBLNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KBLNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "KBLPOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KBLPOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WEORA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WEORA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SRV_BAS_COM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SRV_BAS_COM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PRIO_URG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRIO_URG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PRIO_REQ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRIO_REQ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EMPST",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EMPST",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIFF_INVOICE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIFF_INVOICE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TRMRISK_RELEVANT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TRMRISK_RELEVANT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CREATIONDATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CREATIONDATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CREATIONTIME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CREATIONTIME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_ABGRU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_ABGRU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CRM_SO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CRM_SO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CRM_SO_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CRM_SO_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CRM_REF_SO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CRM_REF_SO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CRM_REF_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CRM_REF_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CRM_FKREL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CRM_FKREL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CHNG_SYS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CHNG_SYS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_INSMK_SRC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_INSMK_SRC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CQ_CTRLTYPE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CQ_CTRLTYPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_CQ_NOCQ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_CQ_NOCQ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "REASON_CODE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REASON_CODE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CQU_SAR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CQU_SAR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ANZSN",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ANZSN",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "SPE_EWM_DTC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SPE_EWM_DTC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXLIN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXLIN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXSNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXSNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EHTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EHTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RETPC",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "RETPC",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DPTYP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DPTYP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DPPCT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DPPCT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DPAMT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DPAMT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DPDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DPDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FLS_RSTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FLS_RSTO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXT_RFX_NUMBER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXT_RFX_NUMBER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXT_RFX_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXT_RFX_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXT_RFX_SYSTEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXT_RFX_SYSTEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SRM_CONTRACT_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SRM_CONTRACT_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SRM_CONTRACT_ITM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SRM_CONTRACT_ITM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BLK_REASON_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BLK_REASON_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BLK_REASON_TXT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BLK_REASON_TXT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ITCONS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ITCONS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FIXMG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FIXMG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WABWE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WABWE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CMPL_DLV_ITM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CMPL_DLV_ITM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INCO2_L",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INCO2_L",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INCO3_L",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INCO3_L",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXTERNALREFERENCEID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXTERNALREFERENCEID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TC_AUT_DET",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TC_AUT_DET",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MANUAL_TC_REASON",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MANUAL_TC_REASON",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FISCAL_INCENTIVE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FISCAL_INCENTIVE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TAX_SUBJECT_ST",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TAX_SUBJECT_ST",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FISCAL_INCENTIVE_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FISCAL_INCENTIVE_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SF_TXJCD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SF_TXJCD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "/BEV1/NEGEN_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "/BEV1/NEGEN_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "/BEV1/NEDEPFREE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "/BEV1/NEDEPFREE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "/BEV1/NESTRUCCAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "/BEV1/NESTRUCCAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADVCODE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADVCODE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BUDGET_PD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BUDGET_PD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EXCPE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXCPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FMFGUS_KEY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FMFGUS_KEY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "IUID_RELEVANT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "IUID_RELEVANT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MRPIND",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MRPIND",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SGT_SCAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SGT_SCAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SGT_RCAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SGT_RCAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WRF_CHARSTC1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WRF_CHARSTC1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WRF_CHARSTC2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WRF_CHARSTC2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WRF_CHARSTC3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WRF_CHARSTC3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWORKORDERNO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWORKORDERNO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZREQITNO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZREQITNO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZREQITLINE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZREQITLINE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWERKS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWERKS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZLGORT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZLGORT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZCLASS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZCLASS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZKLART",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZKLART",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZCHARACTERISTIC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZCHARACTERISTIC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZVALUE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZVALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZAUTOREL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZAUTOREL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZPK_NAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZPK_NAME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZFLOW_NAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZFLOW_NAME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZREWORK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZREWORK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZBUILDTYPE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZBUILDTYPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZEAN11",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZEAN11",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZNO_CAT_ITM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZNO_CAT_ITM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZHEDGE_FLAG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZHEDGE_FLAG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZ_BACKUP_FLAG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZ_BACKUP_FLAG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZ_NONE_HEDGE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZ_NONE_HEDGE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWARRANTY_SDATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWARRANTY_SDATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWARRANTY_EDATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWARRANTY_EDATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWARRANTY_DAYS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWARRANTY_DAYS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZWBS_LEVEL4",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZWBS_LEVEL4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZEQUIP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZEQUIP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZUSR11",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZUSR11",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "REFSITE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REFSITE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "/SAPMP/GPOSE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "/SAPMP/GPOSE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANGPN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANGPN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADMOI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADMOI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADPRI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADPRI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LPRIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LPRIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADACN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADACN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AFPNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AFPNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BSARK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BSARK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AUDAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AUDAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANGNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANGNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PNSTAT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PNSTAT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADDNS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADDNS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SERRU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SERRU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SERNP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SERNP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_SOBKZ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_SOBKZ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_PSPNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_PSPNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_KUNNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_KUNNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_VBELN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_VBELN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_POSNR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_POSNR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISUB_OWNER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DISUB_OWNER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_SEASON_YEAR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_SEASON_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_SEASON",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_SEASON",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_COLLECTION",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_COLLECTION",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_THEME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_THEME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_ATP_DATE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_ATP_DATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_VAS_REL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_VAS_REL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_VAS_PRNT_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_VAS_PRNT_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_TRANSACTION",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_TRANSACTION",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_ITEM_GROUP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_ITEM_GROUP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_SS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_SS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_GRID_COND_REC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_GRID_COND_REC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_PSM_PFM_SPLIT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_PSM_PFM_SPLIT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CNFM_QTY",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CNFM_QTY",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "FSH_PQR_UEPOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FSH_PQR_UEPOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "STPAC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "STPAC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LGBZO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LGBZO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LGBZO_B",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LGBZO_B",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ADDRNUM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ADDRNUM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CONSNUM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CONSNUM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BORGR_MISS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BORGR_MISS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "REF_ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REF_ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SOURCE_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SOURCE_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SOURCE_KEY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SOURCE_KEY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PUT_BACK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PUT_BACK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "POL_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POL_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CONS_ORDER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CONS_ORDER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SLT_OPERATION_FLAG",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SLT_OPERATION_FLAG",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SLT_UPDATE_TIMESTAMP",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "SLT_UPDATE_TIMESTAMP",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZCALM_NUM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZCALM_NUM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZZPARENT_CALM_NUM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ZZPARENT_CALM_NUM",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_ojs",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_ojs",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-01-13T03:57:27Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

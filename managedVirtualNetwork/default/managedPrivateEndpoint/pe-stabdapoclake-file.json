@@ -1,0 +1,10 @@
+{
+	"name": "pe-stabdapoclake-file",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/e52a03e7-da01-4e65-923e-ac0dcedcc4ac/resourceGroups/RG-BDA-POC/providers/Microsoft.Storage/storageAccounts/stabdapoclake",
+		"groupId": "file",
+		"fqdns": [
+			"stabdapoclake.file.core.windows.net"
+		]
+	}
+}

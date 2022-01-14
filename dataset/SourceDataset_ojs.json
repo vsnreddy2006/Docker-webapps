@@ -1,0 +1,17 @@
+{
+	"name": "SourceDataset_ojs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HanaDB1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SapHanaTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SLT_REP",
+			"table": "EKPO"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

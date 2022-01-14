@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_ojs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SLT_REP",
+			"table": "EKPO"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

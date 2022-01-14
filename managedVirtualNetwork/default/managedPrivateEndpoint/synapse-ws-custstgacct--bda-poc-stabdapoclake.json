@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-custstgacct--bda-poc-stabdapoclake",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/e52a03e7-da01-4e65-923e-ac0dcedcc4ac/resourceGroups/RG-BDA-POC/providers/Microsoft.Storage/storageAccounts/stabdapoclake",
+		"groupId": "dfs",
+		"fqdns": [
+			"stabdapoclake.dfs.core.windows.net"
+		]
+	}
+}

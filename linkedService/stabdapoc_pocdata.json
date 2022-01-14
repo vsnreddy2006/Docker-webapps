@@ -1,0 +1,17 @@
+{
+	"name": "stabdapoc_pocdata",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureFileStorage",
+		"typeProperties": {
+			"sasUri": "https://stabdapoc.file.core.windows.net/",
+			"fileShare": "poc-data",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNZTkFQU0VAM0U5QzVCMTAtNjVGOC00MzQ4LTlFNTQtMjQyODBDNTA4OTgwXzdiY2U0N2E0LTQ2OTQtNDRjOC05OTJjLTZhZTE3MTdjYzQ0ZiINCn0="
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

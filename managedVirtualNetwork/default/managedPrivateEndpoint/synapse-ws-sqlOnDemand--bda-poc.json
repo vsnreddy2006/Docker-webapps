@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--bda-poc",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/e52a03e7-da01-4e65-923e-ac0dcedcc4ac/resourceGroups/RG-BDA-POC/providers/Microsoft.Synapse/workspaces/bda-poc",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"bda-poc-ondemand.63976196-7fd7-4770-92de-b9207efe9bd9.sql.azuresynapse.net"
+		]
+	}
+}

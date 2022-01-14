@@ -1,0 +1,16 @@
+{
+	"name": "BOMSSPROD693",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=BOMSSPROD693.micron.com,5423;initial catalog=Inventory;user id=sapphire",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNZTkFQU0VAM0U5QzVCMTAtNjVGOC00MzQ4LTlFNTQtMjQyODBDNTA4OTgwX2Y2NTQ1MTBiLTk4ZjQtNDMyMC04MGNiLTFhNDEzNjI2ZjczYyINCn0="
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

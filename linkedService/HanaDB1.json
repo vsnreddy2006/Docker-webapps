@@ -1,0 +1,17 @@
+{
+	"name": "HanaDB1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"description": "SAP HANA DB1 System on GCP VM",
+		"annotations": [],
+		"type": "SapHana",
+		"typeProperties": {
+			"connectionString": "servernode=gclhanabwdb1.gc.micron.com;uid=IT_SHARED",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyMTY5ZDc0Ny03MmI0LTRkYjctODM1Zi1hMzk5OGRhMDBhMGIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "gcpvmIR001",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

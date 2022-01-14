@@ -1,0 +1,15 @@
+{
+	"name": "DestinationDataset_bmj",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"typeProperties": {
+			"table": ""
+		},
+		"sqlPool": {
+			"referenceName": "DedicatedSQLPool",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
